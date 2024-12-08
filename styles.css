@@ -1,98 +1,251 @@
-/* General Body Styling */
+/* General Reset */
 body {
-    background-color: #121212; /* Dark background */
-    color: white; /* Light text color */
-    font-family: Arial, sans-serif; /* Clean font */
     margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition between modes */
 }
 
-/* Big Title Styling */
-.big-title {
+/* Light Mode Styles (Default) */
+body {
+    background-color: #ecf0f1;
+    color: #2c3e50;
+}
+
+.title-container {
     text-align: center;
-    padding: 40px 0;
+    margin: 20px 0;
 }
 
-.big-title h1 {
+.main-title {
     font-size: 3rem;
-    margin: 0;
-    color: white; /* White text */
+    color: #2c3e50;
+    margin-bottom: 10px;
 }
 
-/* Image Title Styling */
-.image-title {
-    text-align: center;
-    margin-top: 40px; /* Increased space between title and images */
+.sub-title {
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin-top: 0;
 }
 
-.image-title h2 {
-    font-size: 2rem;
-    margin: 0;
-    color: white; /* White text */
-}
-
-/* Slideshow Container Styling */
-.slideshow-container {
-    position: relative;
-    max-width: 80%; /* Make the images smaller */
-    margin: 0 auto; /* Center the slideshow container */
+/* Image Section */
+.image-section {
     padding: 20px;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.6); /* Dark background with slight transparency */
-}
-
-/* Slide Styling */
-.slide {
-    display: none;
     text-align: center;
 }
 
-/* Image Styling */
-img {
-    width: 80%; /* Reduce image size */
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Add shadow around the images */
+.photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
 }
 
-/* Navigation buttons styling */
-.prev, .next {
-    position: absolute;
-    top: 50%;
-    padding: 16px;
-    background-color: rgba(0, 0, 0, 0.7); /* Darker background */
-    color: white;
-    font-size: 24px;
-    border: none;
+.photo-row img {
+    width: 30%;
+    border: 2px solid #bdc3c7;  /* Soft gray border */
+    border-radius: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+.expand-btn {
+    margin-top: 10px;
     cursor: pointer;
-    z-index: 1;
-    transition: 0.3s ease;
-    border-radius: 50%;
+    color: #3498db;  /* Blue color */
+    font-weight: bold;
+    border: none;
+    background: transparent;
 }
 
-.prev {
-    left: 10px;
+.expand-btn:hover {
+    color: #99aab5;  /* Lighter hover color */
 }
 
-.next {
+/* Photography Section */
+#photographs {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-top: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+#photographs h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.photo-author {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #34495e;
+}
+
+/* Drawings Section */
+#drawings {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-top: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#drawings h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+#drawings img {
+    max-width: 90%;
+    margin: 10px 0;
+    border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#drawings p {
+    text-align: right;
+    margin: 0;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #34495e;
+}
+
+/* Writing Section */
+#writting {
+    padding: 30px;
+    max-width: 800px;
+    margin: 30px auto;
+    background: #ecf0f1;  /* Light background */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#writting h2 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-top: 20px;
+}
+
+#writting p {
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #2f3136;  /* Dark background */
+    color: #dcddde;  /* Light gray text */
+}
+
+body.dark-mode .title-container {
+    color: #dcddde;  /* Light text for title */
+}
+
+body.dark-mode .expand-btn {
+    color: #7289da;  /* Discord blue for expand button */
+}
+
+body.dark-mode .expand-btn:hover {
+    color: #99aab5;  /* Lighter hover color */
+}
+
+/* Image Section - Dark Mode */
+body.dark-mode .photo-row img {
+    border: 2px solid #444851;  /* Soft gray border */
+}
+
+/* Photography Section - Dark Mode */
+body.dark-mode #photographs {
+    background-color: #36393f;  /* Dark background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Slightly darker shadow */
+}
+
+body.dark-mode #photographs h2 {
+    color: #dcddde;  /* Light gray text */
+}
+
+body.dark-mode .photo-author {
+    color: #99aab5;  /* Slightly lighter gray text */
+}
+
+/* Drawings Section - Dark Mode */
+body.dark-mode #drawings {
+    background-color: #36393f;  /* Dark background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode #drawings h2 {
+    color: #dcddde;  /* Light gray text */
+}
+
+body.dark-mode #drawings p {
+    color: #99aab5;  /* Lighter gray text */
+}
+
+/* Writing Section - Dark Mode */
+body.dark-mode #writting {
+    background: #2f3136;  /* Dark background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode #writting h2 {
+    color: #dcddde;  /* Light gray text */
+}
+
+body.dark-mode #writting p {
+    color: #dcddde;  /* Light gray text */
+}
+
+/* Dark Mode Button Styling */
+/* Dark Mode Button Styling */
+#dark-mode-toggle {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
     right: 10px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
 }
 
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.9);
+#dark-mode-toggle:hover {
+    background-color: #5b6eae;
 }
 
-/* Fading Animation */
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
+/* Icon Styling */
+#mode-icon {
+    font-size: 1.5rem; /* Icon size */
+    margin: 0;
 }
 
-@keyframes fade {
-    from {
-        opacity: 0.4;
-    }
-    to {
-        opacity: 1;
-    }
+body.dark-mode #mode-icon {
+    color: white; /* White icon for dark mode */
+}
+
+#mode-icon {
+    color: black; /* Black icon for light mode */
+}
+
+/* Make main title in dark mode the same color as h2 titles in dark mode */
+body.dark-mode .main-title {
+    color: #dcddde; /* Same color as h2 titles in dark mode */
 }

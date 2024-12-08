@@ -1,60 +1,94 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Slideshow</title>
+    <title>Environmental Ethics Challenge</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Add Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
+<!-- Dark Mode Toggle Button -->
+<!-- Dark Mode Button with Icon -->
+<button id="dark-mode-toggle">
+    <i id="mode-icon" class="fas fa-sun"></i> <!-- Default Light Mode Icon -->
+</button>
 
-<!-- Big title -->
-<div class="big-title">
-    <h1>Environmental Ethics Challenge</h1>
+
+<!-- Title Section -->
+<div class="title-container">
+    <h1 class="main-title">Environmental Ethics Challenge</h1>
+    <h2 class="sub-title">Brandon Boros, Alyssa Ball, Natasha Lauzon, Sivan Chason, Samara Ceolin</h2>
 </div>
 
-<!-- Slideshow Section -->
-<div class="slideshow-container">
-    <!-- Sub-title for pictures -->
-    <div class="image-title">
-        <h2>Pictures</h2>
+<!-- Pictures Section -->
+<div id="photographs" class="image-section">
+    <h2>Photographs</h2>
+    <p class="photo-author">by Brandon Boros</p>
+    <div class="photo-gallery">
+        <div class="photo-row">
+            <img src="images/IMG_0155.JPG" alt="Image 1">
+            <img src="images/IMG_0156.JPG" alt="Image 2">
+            <img src="images/IMG_0161.JPG" alt="Image 3">
+        </div>
+        <div class="photo-row hidden">
+            <img src="images/IMG_0168.JPG" alt="Image 4">
+            <img src="images/IMG_0172.JPG" alt="Image 5">
+            <img src="images/IMG_0175.JPG" alt="Image 6">
+        </div>
+        <div class="photo-row hidden">
+            <img src="images/IMG_0177.JPG" alt="Image 7">
+            <img src="images/IMG_0183.JPG" alt="Image 8">
+            <img src="images/IMG_0185.JPG" alt="Image 9">
+        </div>
+        <button class="expand-btn">Show More</button>
     </div>
-
-    <div class="slide fade">
-        <img src="images/IMG_0155.JPG" alt="Image 1">
-    </div>
-    <div class="slide fade">
-        <img src="images/IMG_0156.JPG" alt="Image 2">
-    </div>
-    <div class="slide fade">
-        <img src="images/IMG_0161.JPG" alt="Image 3">
-    </div>
-    <div class="slide fade">
-        <img src="images/IMG_0168.JPG" alt="Image 4">
-    </div>
-    <div class="slide fade">
-        <img src="images/IMG_0172.JPG" alt="Image 5">
-    </div>
-    <div class="slide fade">
-        <img src="images/IMG_0175.JPG" alt="Image 6">
-    </div>
-    <div class="slide fade">
-        <img src="images/IMG_0177.JPG" alt="Image 7">
-    </div>
-    <div class="slide fade">
-        <img src="images/IMG_0183.JPG" alt="Image 8">
-    </div>
-    <div class="slide fade">
-        <img src="images/IMG_0185.JPG" alt="Image 9">
-    </div>
-    <div class="slide fade">
-        <img src="images/IMG_0186.JPG" alt="Image 10">
-    </div>
-
-    <!-- Navigation buttons -->
-    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-    <a class="next" onclick="changeSlide(1)">&#10095;</a>
 </div>
 
-<script src="script.js"></script>
+<div id="drawings">
+    <h2>Drawings</h2>
+    <div class="drawing-item">
+        <img src="images/alyssa.jpg" alt="Drawing by Alyssa Ball">
+        <p>by Alyssa Ball</p>
+    </div>
+    <div class="drawing-item">
+        <img src="images/natasha.jpg" alt="Drawing by Natasha Lauzon">
+        <p>by Natasha Lauzon</p>
+    </div>
+    <div class="drawing-item">
+        <img src="images/sivan.jpg" alt="Drawing by Sivan Chason">
+        <p>by Sivan Chason</p>
+    </div>
+    <div class="drawing-item">
+        <img src="images/samara.jpg" alt="Drawing by Samara Ceolin">
+        <p>by Samara Ceolin</p>
+    </div>
+</div>
+
+<!-- Writing Section -->
+<div id="writting">
+    <h2>Individual Focuses</h2>
+    <p>Alyssa focus:</p>
+    <p>Natasha focus:</p>
+    <p>Sivan focus:</p>
+    <p>Samara focus:</p>
+    <p>Brandon is focusing on capturing nature in its worst, and trying to make it seem beautiful through perspective.</p>
+
+    <h2>Group Focus</h2>
+    <p>Our group focus is expressing nature through creative means, making something potentially unenjoyable into a creative piece of art.</p>
+
+    <h2>What is a Challenge?</h2>
+    <p>A challenge is something, usually a goal, that is difficult due to certain circumstances. For example, if your goal was to hike Mount Everest, it would be a challenge since you would need to be able to adapt to harsh climate and have a good enough endurance, often obtained through a lot of training. For us, the best way to approach a challenge would be in a strategic way. Using the example from earlier, if you would just attempt to hike Mount Everest without training it could be very harmful or even deadly. It is important to take precautions when it comes to challenges and properly approach them in order to accomplish them. In this group challenge, each one of us will need to find solutions to our challenges by properly approaching them strategically. There are other ways to approach challenges of course, such as heading in without much thought, though our group believed this was the best approach. Although challenges are oftentimes difficult, it is important to challenge ourselves for many reasons. Oftenly people challenge themselves in order to achieve that satisfaction of doing something that requires a lot of dedication. Sometimes, people challenge themselves to keep themselves busy or occupied. Challenging yourself or others helps us accomplish things some may think are impossible, so that is why it’s important.</p>
+
+    <h2>Climate Emergency Challenges</h2>
+    <p>A major challenge when it comes to ecological emergencies is having the right kind of people take action. Large issues are usually pushed onto the general population, for example “everyone should use electric cars to reduce carbon emissions,” while large corporations or people with a lot of influence are usually the main contributors. Even if most people did so and so, it would only take one person to ruin it for everyone else, and it’s usually not them compensating for it. That alone is a major challenge because how do you overcome this, how do you make sure everyone contributes the amount they should.</p>
+
+    <h2>Difficulty of Challenges</h2>
+    <p>Challenges can be of a variety in difficulty, but we believe the sweet spot for challenges are when they become almost unreachable. This is because we believe that if a challenge is too easy, it reduces its satisfaction, while when a challenge is too difficult, it increases frustration. Therefore, the spot where a challenge becomes almost unreachable would be the perfect ratio of satisfying and frustrating where the reward, thus being satisfaction, outweighs the difficulty.</p>
+    <p>Some people of course enjoy challenging themselves to different degrees, the “sweat” spot for each individual is different and it’s different for each challenge. It’s almost like a threshold, everyone has a point where the satisfaction received from accomplishing a challenge is disproportionate to its difficulty, and it all comes down to what you value. Some who value struggles will be more inclined to take harder challenges than others. Climbing Mount Everest isn't for everyone.</p>
+    <p>We believe the best way to sharpen our appetite to take on a challenge is to make it fun. If a challenge isn’t fun you wouldn’t want to do it in the first place, so finding ways to make a challenge fun is important to keep you consistent in your pursuit of the challenge. Making working towards a challenge a habit is crucial to staying dedicated, so without it being fun or enjoyable, it would be difficult to make a habit of.</p>
+</div>
 </body>
 </html>

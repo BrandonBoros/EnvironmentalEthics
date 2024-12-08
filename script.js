@@ -1,42 +1,18 @@
-let slideIndex = 0;
+document.addEventListener("DOMContentLoaded", () => {
+    const expandBtn = document.querySelector(".expand-btn");
+    const hiddenRows = document.querySelectorAll(".hidden");
+    const darkModeToggle = document.getElementById("dark-mode-toggle");
 
-function showSlides() {
-    let slides = document.getElementsByClassName("slide");
+    // Expand/Collapse photo rows
+    expandBtn.addEventListener("click", () => {
+        hiddenRows.forEach(row => row.classList.toggle("hidden"));
+        expandBtn.textContent = expandBtn.textContent.includes("Show More")
+            ? "Show Less"
+            : "Show More";
+    });
 
-    // Hide all slides
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-
-    // Show the current slide
-    slideIndex++;
-    if (slideIndex > slides.length) {
-        slideIndex = 1;
-    }
-
-    slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
-
-function changeSlide(n) {
-    let slides = document.getElementsByClassName("slide");
-
-    slideIndex += n;
-    if (slideIndex > slides.length) {
-        slideIndex = 1;
-    }
-    if (slideIndex < 1) {
-        slideIndex = slides.length;
-    }
-
-    // Hide all slides
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-
-    // Show the current slide
-    slides[slideIndex - 1].style.display = "block";
-}
-
-// Initialize the slideshow
-showSlides();
+    // Toggle Dark Mode
+    darkModeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+    });
+});
