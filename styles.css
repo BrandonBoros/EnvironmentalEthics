@@ -105,8 +105,9 @@ body {
     margin-bottom: 15px;
 }
 
+/* Drawings Section - Adjust Image Size */
 #drawings img {
-    max-width: 90%;
+    width: 50%;  /* Set width to match the photographs */
     margin: 10px 0;
     border-radius: 10px;
     display: block;
@@ -114,8 +115,9 @@ body {
     margin-right: auto;
 }
 
+
 #drawings p {
-    text-align: right;
+    text-align: center;
     margin: 0;
     font-size: 0.9rem;
     font-style: italic;
